@@ -1,0 +1,14 @@
+.card-img-top {
+    padding:2rem 2rem;
+}
+.card-group {
+    margin: 5rem;
+}
+.card {
+    padding:2rem 1rem;
+}
+
+#footer {
+    padding:1rem 1rem;
+    text-align: center;
+}
