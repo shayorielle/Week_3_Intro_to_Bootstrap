@@ -1,14 +1,37 @@
-.card-img-top {
-    padding:2rem 2rem;
+/*body.container-fluid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+}*//*this made everything distorted*/
+nav{
+    display: grid;
+    gap: 1rem;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 4px 2px rgba(31, 31, 31, 0.489);
 }
-.card-group {
-    margin: 5rem;
-}
-.card {
-    padding:2rem 1rem;
+.card-group-clinicians, .card-group {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-#footer {
-    padding:1rem 1rem;
+.card-body {
+    box-shadow: 4px 4px 5px 2px rgba(31, 31, 31, 0.489);
+    border-radius: 5px;
+}
+.card-title, .card-text  {
     text-align: center;
+}
+
+.card-img,.card-img-top {
+    padding:2rem 2rem;
+}
+
+footer{
+    margin-top: 2rem;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 2px 2px 4px 2px rgba(31, 31, 31, 0.489);
+    
 }
