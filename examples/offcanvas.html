@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Offcanvas & Other Components</title>
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap/dist/css/bootstrap.css"
+    />
+    <link
+      rel="stylesheet"
+      href="/node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-expand-sm bg-body-tertiary bg-dark"
+      data-bs-theme="dark"
+      style="border-radius: 5px; box-shadow: 1px 1px 4px"
+    >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/index.html">Week 3: Bootstrap</a>
+
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="/index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a class="nav-link" href="https://learn.promineotech.com"
+                >Learning Portal</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="https://github.com/shayorielle?tab=repositories"
+                >Github</a
+              >
+            </li>
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Examples
+              </a>
+
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/examples/forms.html">Forms</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/examples/tables.html"
+                    >Tables</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/examples/grids.html">Grid</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/examples/cards.html"
+                    >Card Grid</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </nav>
+    <div class="offcanvas-buttons">
+       
+        <button
+          class="btn btn-primary btn-sm mt-3"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasScrolling"
+          aria-controls="offcanvasScrolling"
+          style="background-color: rgba(255, 255, 255, 0.908); border: none; box-shadow: 2px 3px 3px 2px rgba(63, 61, 61, 0.879); position: sticky; float: left;"
+          >
+          <img
+            src="/node_modules/bootstrap-icons/icons/chevron-right.svg"
+            alt="right arrow" width="25px"/>
+        </button>
+
+        <button
+        class="btn btn-primary d-lg-none btn-sm mt-3"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasResponsive"
+        aria-controls="offcanvasResponsive"
+        style="background-color: rgba(255, 255, 255, 0.908); border: none; box-shadow: 1px 3px 3px 3px rgba(63, 61, 61, 0.879); position: sticky; float: right;"
+      >
+        <img
+          src="/node_modules/bootstrap-icons/icons/chevron-left.svg"
+          alt="left arrow" width="25px"
+        />
+      </button>
+
+    </div>
+<!-------offcanvas scrolling background opens left-->
+    <div
+    class="offcanvas offcanvas-start"
+    data-bs-scroll="true"
+    data-bs-backdrop="false"
+    tabindex="-1"
+    id="offcanvasScrolling"
+    aria-labelledby="offcanvasScrollingLabel"
+  >
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasScrollingLabel">
+        Offcanvas with body scrolling
+      </h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="offcanvas"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="offcanvas-body">
+      <p class=" alert alert-info">Try scrolling the rest of the page to see this option in action.</p>
+      <p>This can't be closed by clicking on the background page. You must use the x to close</p>
+    </div>
+  </div>
+
+    <!----mediator swtch between offcanvas button and content. When the screen is large enough, it will be included, but if the screen is smaller, you can access that same text by using the button-->
+    <div
+      class="offcanvas-lg offcanvas-end"
+      tabindex="-1"
+      id="offcanvasResponsive"
+      aria-labelledby="offcanvasResponsiveLabel"
+    >
+<!-----Offcanvas toggled content-->
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasResponsiveLabel">
+          Responsive offcanvas
+        </h5>
+        
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          data-bs-target="#offcanvasResponsive"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body">
+        <p class="mb-0 container alert alert-info">
+          This is content within an <code>.offcanvas-lg</code>.
+        </p>
+      </div>
+      <div class="container">
+        <p>If you click on the background page, this will close</p>
+    </div>
+    </div>
+<!-----main body content-->
+    <div class="container">
+        <div class="row">
+           
+                <img class="mt-4" src="/AdobeStock_587506869.jpeg" alt="diverse group of people graphic">
+                
+                <h3 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dignissimos.
+                </h3>
+                <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ducimus nostrum impedit maiores illum minus expedita, libero quisquam modi voluptas laudantium, consequuntur neque dignissimos enim incidunt praesentium sint, sequi veniam esse odit deserunt! Omnis iusto sed eaque cumque repellat doloribus? Officia quidem delectus voluptas, eum necessitatibus dolores eligendi ipsam minus harum et minima nihil aut! Earum aspernatur obcaecati aliquam cumque vel, assumenda, explicabo minus ipsum nihil deserunt non, voluptatibus illo voluptatem sequi quia doloremque? Temporibus, odio quod ipsa officiis atque enim magnam. Sit sed ipsum laborum provident perferendis excepturi fugiat a dignissimos laboriosam dolorum, rerum molestias molestiae consequatur? Cum illo expedita eaque officiis dolorum aperiam quam repellendus soluta quis, maiores aut delectus distinctio quod ipsum, quae est deleniti earum dolor nostrum? Quae unde tempore aspernatur? Deserunt quisquam voluptate, eos sequi natus consequatur nemo tempora alias quos praesentium explicabo aut, excepturi, obcaecati nobis? Inventore omnis ipsa culpa reiciendis amet est soluta incidunt modi, exercitationem labore consequuntur, sequi mollitia quo. Architecto accusantium quas sapiente nemo at impedit aliquid ducimus porro a, quos error. Repellat modi, accusantium cumque maiores architecto accusamus sunt, labore, dolorem dolor et vitae dicta esse consequatur ullam porro quas quo eius quia facere voluptatum! Dignissimos nihil ad pariatur iusto?
+                </p>
+
+                <h3 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dignissimos.
+                </h3>
+                <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ducimus nostrum impedit maiores illum minus expedita, libero quisquam modi voluptas laudantium, consequuntur neque dignissimos enim incidunt praesentium sint, sequi veniam esse odit deserunt! Omnis iusto sed eaque cumque repellat doloribus? Officia quidem delectus voluptas, eum necessitatibus dolores eligendi ipsam minus harum et minima nihil aut! Earum aspernatur obcaecati aliquam cumque vel, assumenda, explicabo minus ipsum nihil deserunt non, voluptatibus illo voluptatem sequi quia doloremque? Temporibus, odio quod ipsa officiis atque enim magnam. Sit sed ipsum laborum provident perferendis excepturi fugiat a dignissimos laboriosam dolorum, rerum molestias molestiae consequatur? Cum illo expedita eaque officiis dolorum aperiam quam repellendus soluta quis, maiores aut delectus distinctio quod ipsum, quae est deleniti earum dolor nostrum? Quae unde tempore aspernatur? Deserunt quisquam voluptate, eos sequi natus consequatur nemo tempora alias quos praesentium explicabo aut, excepturi, obcaecati nobis? Inventore omnis ipsa culpa reiciendis amet est soluta incidunt modi, exercitationem labore consequuntur, sequi mollitia quo. Architecto accusantium quas sapiente nemo at impedit aliquid ducimus porro a, quos error. Repellat modi, accusantium cumque maiores architecto accusamus sunt, labore, dolorem dolor et vitae dicta esse consequatur ullam porro quas quo eius quia facere voluptatum! Dignissimos nihil ad pariatur iusto?
+                </p>
+
+                <h3 class="mt-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, dignissimos.
+                </h3>
+                <p class="mt-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum ducimus nostrum impedit maiores illum minus expedita, libero quisquam modi voluptas laudantium, consequuntur neque dignissimos enim incidunt praesentium sint, sequi veniam esse odit deserunt! Omnis iusto sed eaque cumque repellat doloribus? Officia quidem delectus voluptas, eum necessitatibus dolores eligendi ipsam minus harum et minima nihil aut! Earum aspernatur obcaecati aliquam cumque vel, assumenda, explicabo minus ipsum nihil deserunt non, voluptatibus illo voluptatem sequi quia doloremque? Temporibus, odio quod ipsa officiis atque enim magnam. Sit sed ipsum laborum provident perferendis excepturi fugiat a dignissimos laboriosam dolorum, rerum molestias molestiae consequatur? Cum illo expedita eaque officiis dolorum aperiam quam repellendus soluta quis, maiores aut delectus distinctio quod ipsum, quae est deleniti earum dolor nostrum? Quae unde tempore aspernatur? Deserunt quisquam voluptate, eos sequi natus consequatur nemo tempora alias quos praesentium explicabo aut, excepturi, obcaecati nobis? Inventore omnis ipsa culpa reiciendis amet est soluta incidunt modi, exercitationem labore consequuntur, sequi mollitia quo. Architecto accusantium quas sapiente nemo at impedit aliquid ducimus porro a, quos error. Repellat modi, accusantium cumque maiores architecto accusamus sunt, labore, dolorem dolor et vitae dicta esse consequatur ullam porro quas quo eius quia facere voluptatum! Dignissimos nihil ad pariatur iusto?
+                </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container-fluid bg-body-tertiary text-white text-center mt-4" data-bs-theme="dark">
+            <p>&copy; Shay Selden 2024</p>
+        </div>
+      </footer>
+
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>

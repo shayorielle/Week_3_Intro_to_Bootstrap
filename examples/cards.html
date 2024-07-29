@@ -1,26 +1,21 @@
-<!-- Build a page with a nav bar and use grid to make a row g-3 with 2 columns and 
-    place 4 card components 2 in each column.
-Add a modal to the page. Place the button to launch the modal below the columns. -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+    <link rel="stylesheet" href="/node_modules//bootstrap/dist/css/bootstrap.css">
   </head>
   <body>
+    <!----Navigation bar with dropdowns and quicklinks-->
     <nav
       class="navbar navbar-expand-sm bg-body-tertiary bg-dark"
       data-bs-theme="dark"
+      style="border-radius: 5px; box-shadow: 1px 1px 4px"
     >
+      <!----fluid container nav-->
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Week 3: Bootstrap</a>
+        <a class="navbar-brand" href="/index.html">Week 3: Bootstrap</a>
 
         <button
           class="navbar-toggler"
@@ -37,9 +32,9 @@ Add a modal to the page. Place the button to launch the modal below the columns.
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="/index.html"
-                >Home</a
-              >
+              <a class="nav-link active" aria-current="page" href="/index.html">
+                Home
+              </a>
             </li>
 
             <li class="nav-item">
@@ -77,7 +72,7 @@ Add a modal to the page. Place the button to launch the modal below the columns.
                   >
                 </li>
                 <li>
-                  <a class="dropdown-item" href="/examples/grids.html">Grid</a>
+                  <a class="dropdown-item" href="/examples/offcanvas.html">Offcanvas</a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="/examples/cards.html"
@@ -92,127 +87,540 @@ Add a modal to the page. Place the button to launch the modal below the columns.
     </nav>
 
     <main class="container">
-      <div class="row">
-        <div class="card col-sm-10 col-md-5 mx-auto m-4" style="border: 0; box-shadow: 1px 1px 10px; border-radius: 15px;">
-          <img class="m-3" style="border-radius: 10px;" src="batman.jpg" alt="" />
-          <div class="card-body">
-            <h3 class="card-title">Card Title</h3>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              nostrum vitae aspernatur qui a quisquam non totam doloremque iure
-              corrupti!
-            </p>
+      
+      <!----Card Set with accordian text and modal buttons-->
+      <div class="card-group">
+        
+        <!----First Row-->
+        <div class="row container">
+          
+          <!---First Card-->
+          <div
+            class="card col-sm-10 col-md-5 col-lg-5 m-3 mx-auto"
+            style="border: 0; box-shadow: 1px 1px 10px; border-radius: 5px; text-align: center;"
+          >
+            <img
+              class="m-3 p-4"
+              style="border-radius: 5px"
+              src="/Profile icons/13.png"
+              alt=""
+            />
+            <div class="badge bg-primary mb-4">
+              Important Information</div>
+            <div class="accordion mb-4" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
             <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Launch static backdrop modal
-            </button>
+                type="button"
+                class="btn btn-primary mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Static Backdrop Modal
+              </button>
           </div>
-        </div>
-        <div class="card col-sm-10 col-md-5 mx-auto m-4" style="border: 0; box-shadow: 1px 1px 10px; border-radius: 15px;">
-          <img class="m-3" style="border-radius: 10px;" src="batman.jpg" alt="" />
-          <div class="card-body">
-            <h3 class="card-title">Card Title</h3>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              nostrum vitae aspernatur qui a quisquam non totam doloremque iure
-              corrupti!
-            </p>
+          
+          <!---Second Card-->
+          <div
+            class="card col-sm-10 col-md-5 col-lg-5 m-3 mx-auto"
+            style="border: 0; box-shadow: 1px 1px 10px; border-radius: 5px; text-align: center;"
+          >
+            <img
+              class="m-3 p-4"
+              style="border-radius: 5px"
+              src="/Profile icons/12.png"
+              alt=""
+            />
+            <div class="badge bg-primary mb-4">
+              Important Information</div>
+            <div class="accordion mb-4" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
             <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Launch static backdrop modal
-            </button>
+                type="button"
+                class="btn btn-primary mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Static Backdrop Modal
+              </button>
+          </div>
+
+          
+          </div>
+
+        </div>
+
+        <!-----Second Row-->
+        <div class="row container">
+          
+          <!---Row 2 Card 1-->
+          <div 
+          class="card col-sm-10 col-md-5 col-lg-5 m-3 mx-auto" style="border: 0; box-shadow: 1px 1px 6px">
+            <img class="m-3 p-4"
+            style="border-radius: 5px" src="/Profile icons/14.png" alt="" />
+            <h4 class="card-title mx-auto mt-2">Card Title</h4>
+            <p class="card-subtitle mx-auto mb-2">Card Subtitle</p>
+            <div class="badge bg-primary mb-4">
+              Important Information</div>
+            <div class="accordion mb-4" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+                type="button"
+                class="btn btn-primary mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Static Backdrop Modal
+              </button>
+          </div>
+
+          <!---Row 2 Card 2-->
+          <div 
+          class="card col-sm-10 col-md-5 col-lg-5 m-3 mx-auto" style="border: 0; box-shadow: 1px 1px 6px">
+            <img class="m-3 p-4"
+            style="border-radius: 5px" src="/Profile icons/11.png" alt="" />
+            <h4 class="card-title mx-auto mt-2">Card Title</h4>
+            <p class="card-subtitle mx-auto mb-2">Card Subtitle</p>
+            <div 
+                class="badge bg-primary mb-4"
+                >Important Information</div>
+            <div class="accordion mb-4" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOneC"
+                    aria-expanded="true"
+                    aria-controls="collapseOneC"
+                  >
+                    Accordion Item #1
+                  </button>
+                </h2>
+                <div
+                  id="collapseOneC"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the first item's accordion body.</strong> It
+                    is shown by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwoC"
+                    aria-expanded="false"
+                    aria-controls="collapseTwoC"
+                  >
+                    Accordion Item #2
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwoC"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the second item's accordion body.</strong>
+                    It is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThreeC"
+                    aria-expanded="false"
+                    aria-controls="collapseThreeC"
+                  >
+                    Accordion Item #3
+                  </button>
+                </h2>
+                <div
+                  id="collapseThreeC"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>This is the third item's accordion body.</strong> It
+                    is hidden by default, until the collapse plugin adds the
+                    appropriate classes that we use to style each element. These
+                    classes control the overall appearance, as well as the
+                    showing and hiding via CSS transitions. You can modify any
+                    of this with custom CSS or overriding our default variables.
+                    It's also worth noting that just about any HTML can go
+                    within the <code>.accordion-body</code>, though the
+                    transition does limit overflow.
+                  </div>
+                  
+                </div>
+              
+              </div>
+            </div>
+            <button
+                type="button"
+                class="btn btn-primary mb-4"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Static Backdrop Modal
+              </button>
+          </div>
+        
+        </div>
+      </div>
+
+      <!-----Modal for the buttons in first card set*/---->
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Mo' Modal
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">I did it! It's a modal!</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button type="button" class="btn btn-primary mb-4">Understood</button>
+            </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="card col-sm-10 col-md-5 mx-auto m-4" style="border: 0; box-shadow: 1px 1px 10px; border-radius: 15px;">
-          <img class="m-3" style="border-radius: 10px;" src="batman.jpg" alt="" />
-          <div class="card-body">
-            <h3 class="card-title">Card Title</h3>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              nostrum vitae aspernatur qui a quisquam non totam doloremque iure
-              corrupti!
-            </p>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Launch static backdrop modal
-            </button>
-          </div>
-        </div>
-        <div class="card col-sm-10 col-md-5 mx-auto m-4" style="border: 0; box-shadow: 1px 1px 10px; border-radius: 15px;">
-          <img class="m-3" style="border-radius: 10px;" src="batman.jpg" alt="" />
-          <div class="card-body">
-            <h3 class="card-title">Card Title</h3>
-            <p class="card-text">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi
-              nostrum vitae aspernatur qui a quisquam non totam doloremque iure
-              corrupti!
-            </p>
-            <button
-              type="button"
-              class="btn btn-primary"
-              data-bs-toggle="modal"
-              data-bs-target="#staticBackdrop"
-            >
-              Launch static backdrop modal
-            </button>
-          </div>
-        </div>
-      </div>
+
     </main>
 
-    <div
-      class="modal fade"
-      id="staticBackdrop"
-      data-bs-backdrop="static"
-      data-bs-keyboard="false"
-      tabindex="-1"
-      aria-labelledby="staticBackdropLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="staticBackdropLabel">Mo' Modal</h1>
-            <button
-              type="button"
-              class="btn-close"
-              data-bs-dismiss="modal"
-              aria-label="Close"
-            ></button>
-          </div>
-          <div class="modal-body">I did it! It's a modal!</div>
-          <div class="modal-footer">
-            <button
-              type="button"
-              class="btn btn-secondary"
-              data-bs-dismiss="modal"
-            >
-              Close
-            </button>
-            <button type="button" class="btn btn-primary">Understood</button>
-          </div>
-        </div>
+    <footer>
+      <div class="container-fluid bg-body-tertiary text-white text-center mt-4" data-bs-theme="dark">
+          <p>&copy; Shay Selden 2024</p>
       </div>
-    </div>
+    </footer>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+<!-----Bootstrap js-->
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  
   </body>
 </html>

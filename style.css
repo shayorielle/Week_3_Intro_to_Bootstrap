@@ -1,8 +1,30 @@
+
+@font-face {
+    src: url(/node_modules/bootstrap-icons/font/bootstrap-icons.css);
+}
+
+<img src="/node_modules/bootstrap-icons/icons/megaphone-fill.svg" alt="megaphone" width="20px">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*body.container-fluid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: auto;
 }*//*this made everything distorted*/
+
+/*
 nav{
     display: grid;
     gap: 1rem;
